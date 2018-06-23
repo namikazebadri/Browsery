@@ -1,14 +1,22 @@
-package com.unisbadri.browsery;
+package com.unisbadri.browsery.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-public class InAppBrowser extends AppCompatActivity {
+import com.unisbadri.browsery.options.BrowserOptions;
+
+public class InAppBrowserActivity extends AppCompatActivity {
+
+    protected BrowserOptions options;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+    }
 
-        setContentView(R.layout.activity_in_app_browser);
+    protected void initialize(int layout) {
+        setContentView(layout);
+
+        this.options = getIntent().getParcelableExtra(BrowserOptions.BROWSER_OPTIONS);
     }
 }

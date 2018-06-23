@@ -1,4 +1,11 @@
-package com.unisbadri.browsery;
+package com.unisbadri.browsery.activities;
 
-public class DefaultBrowser {
+import android.os.Bundle;
+
+public class DefaultBrowserActivity extends InAppBrowserActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
 }
